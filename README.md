@@ -1,4 +1,4 @@
-# Semantic Similarity Search with Sentence Transformers
+# Semantic Similarity Search
 
 ## 📖 Introduction
 
