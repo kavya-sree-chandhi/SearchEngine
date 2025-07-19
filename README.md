@@ -8,7 +8,7 @@ This project demonstrates how to use [Sentence Transformers](https://www.sbert.n
 
 ## 🚀 Overview
 
-- **Embeds a list of 30 diverse sentences** using the `all-MiniLM-L6-v2` model.
+- **Embeds a list of diverse sentences** using the `all-MiniLM-L6-v2` model.
 - **Computes a cosine similarity matrix** between all pairs of sentences.
 - **Provides a function** to find and display the closest match for any new input sentence based on semantic similarity.
 - Useful for **semantic search**, **chatbot retrieval**, and **natural language understanding** demos.
