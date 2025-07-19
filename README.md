@@ -37,22 +37,20 @@ The function get_closest_match takes a new query sentence, computes its embeddin
 
 ```mermaid
 flowchart TD
-    A([Start]) --> B[Load pre-trained model<br/>SentenceTransformer('all-MiniLM-L6-v2')]
-    B --> C[Define sample sentences (Python list)]
-    C --> D[Generate embeddings<br/>model.encode(sentences)]
-    D --> E[Print shape and example of embeddings]
-
-    E --> F[Calculate cosine similarity matrix<br/>(cosine_similarity)]
-    F --> G[Print semantic similarity matrix<br/>(Upper triangle, readable format)]
-
-    G --> H{Next Step?}
-    H -- "Semantic Search" --> I[Input Query Sentence (e.g., 'pubg')]
-    I --> J[Encode query sentence<br/>model.encode([sentence])]
-    J --> K[Compute cosine similarity<br/>between query and all embeddings]
-    K --> L[Find and return<br/>most similar sentence]
-
+    A([Start]) --> B[Load pre-trained model]
+    B --> C[Define sentences list]
+    C --> D[Generate embeddings]
+    D --> E[Print shape & sample embedding]
+    E --> F[Calculate cosine similarity matrix]
+    F --> G[Print readable similarity matrix]
+    G --> H{Next step?}
+    H -- "Semantic Search" --> I[Input query sentence]
+    I --> J[Encode query sentence]
+    J --> K[Compute cosine similarity with all]
+    K --> L[Return most similar sentence]
     H -- "Stop" --> M([End])
     L --> M
+
 
 
 
