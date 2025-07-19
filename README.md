@@ -36,14 +36,19 @@ The function get_closest_match takes a new query sentence, computes its embeddin
 ## Visual Diagram
 
 ```mermaid
-graph TD
-    A[Start: List of sentences] --> B[Generate embeddings using SentenceTransformer]
-    B --> C[Calculate cosine similarity matrix]
-    C --> D[Display semantic similarity results]
-    D --> E{User provides a query?}
-    E -- Yes --> F[Embed query sentence]
-    F --> G[Find closest match in sentence set]
-    G --> H[Display most similar sentence]
-    E -- No --> I[End]
+flowchart TD
+    A[Start] --> B[Load Pre-trained SentenceTransformer Model]
+    B --> C[Define Sample Sentences]
+    C --> D[Generate Embeddings for Sentences]
+    D --> E[Calculate Cosine Similarity Matrix]
+    E --> F{Use-case?}
+    F -- "Visualize Matrix" --> G[Display Semantic Similarity Matrix]
+    F -- "Find Closest Match" --> H[Input Query Sentence]
+    H --> I[Generate Embedding for Query]
+    I --> J[Compute Cosine Similarity with All Stored Embeddings]
+    J --> K[Return Most Similar Sentence]
+    G --> L[End]
+    K --> L[End]
+
 
 
