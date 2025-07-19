@@ -40,7 +40,7 @@ flowchart TD
     A([Start]) --> B[Load pre-trained model]
     B --> C[Define sentences list]
     C --> D[Generate embeddings]
-    D --> E[Print shape & sample embedding]
+    D --> E[Print shape and sample embedding]
     E --> F[Calculate cosine similarity matrix]
     F --> G[Print readable similarity matrix]
     G --> H{Next step:}
