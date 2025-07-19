@@ -43,7 +43,7 @@ flowchart TD
     D --> E[Print shape & sample embedding]
     E --> F[Calculate cosine similarity matrix]
     F --> G[Print readable similarity matrix]
-    G --> H{Next step?}
+    G --> H{Next step:}
     H -- "Semantic Search" --> I[Input query sentence]
     I --> J[Encode query sentence]
     J --> K[Compute cosine similarity with all]
